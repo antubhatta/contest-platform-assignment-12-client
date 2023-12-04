@@ -1,4 +1,3 @@
-import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
@@ -7,6 +6,7 @@ import Loader from "../../components/shared/Loader";
 import SpinnerMini from "../../components/shared/SpinnerMini";
 import useContestById from "../../hooks/useContestById";
 import { updateContest } from "../../api/contest";
+import { useForm } from "react-hook-form";
 
 const UpdateContest = () => {
   const { id } = useParams();

@@ -7,11 +7,13 @@ const MyWinningContest = () => {
 
   if (isLoading) return <Loader />;
 
+  console.log(contests)
+
   return (
     <div className="container mx-auto">
       <h1 className="text-2xl font-bold mb-8">My Winning Contest</h1>
-      {contests.length === 0 && <Empty resourceName="contest" />}
-      {contests.length !== 0 && (
+      {contests?.length === 0 && <Empty resourceName="contest" />}
+      {contests?.length !== 0 && (
         <div className="bg-white p-8 ">
           {contests?.map((contest) => (
             <div
